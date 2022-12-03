@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/rqfx4454/remy-nicolas.fr/
+    - export DEPLOYPATH=/home/rqfx4454/public_html/
     - /bin/cp -R /home/rqfx4454/repositories/fighting-game $DEPLOYPATH
