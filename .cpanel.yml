@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/rqfx4454/public_html/fighting-game
-    - /bin/cp -R fighting-game $DEPLOYPATH
+    - export DEPLOYPATH=/home/rqfx4454/public_html/
+    - /bin/cp -R /home/rqfx4454/repositories/fighting-game $DEPLOYPATH
