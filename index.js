@@ -79,9 +79,9 @@ function animate() {
 
     player.velocity.x = 0
 
-    if (keys.q.pressed && lastKey === 'q') {
+    if (keys.q.pressed && player.lastKey === 'q') {
         player.velocity.x = -1
-    } else if (keys.d.pressed && lastKey === 'd') {
+    } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 1
     }
 }
@@ -90,7 +90,7 @@ animate()
 
 window.addEventListener('keydown', (event) => {
     console.log('--------', event.key, '--------');
-    
+
     switch (event.key) {
 
         // player keys
