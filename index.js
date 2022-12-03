@@ -64,7 +64,10 @@ const keys = {
     d: {
         pressed: false
     },
-    z: {
+    ArrowRight: {
+        pressed: false
+    },
+    ArrowLeft: {
         pressed: false
     }
 }
@@ -78,11 +81,20 @@ function animate() {
     enemy.update()
 
     player.velocity.x = 0
+    enemy.velocity.x = 0
 
+    // player movement
     if (keys.q.pressed && player.lastKey === 'q') {
-        player.velocity.x = -1
+        player.velocity.x = -10
     } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 1
+        player.velocity.x = 10
+    }
+
+    // enemy movement
+    if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
+        enemy.velocity.x = -10
+    } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
+        enemy.velocity.x = 10
     }
 }
 
@@ -103,7 +115,7 @@ window.addEventListener('keydown', (event) => {
             player.lastKey = 'q'
             break
         case 'z':
-            player.velocity.y = -10
+            player.velocity.y = -20
             break
 
         // enemy keys
@@ -116,7 +128,7 @@ window.addEventListener('keydown', (event) => {
             enemy.lastKey = 'ArrowLeft'
             break
         case 'ArrowUp':
-            enemy.velocity.y = -10
+            enemy.velocity.y = -20
             break
     }
 })
@@ -131,9 +143,9 @@ window.addEventListener('keyup', (event) => {
         case 'q':
             keys.q.pressed = false
             break
-        case 'z':
-            keys.z.pressed = false
-            break
+        // case 'z':
+        //     keys.z.pressed = false
+        //     break
     }
 
     // enemy keys
@@ -144,8 +156,8 @@ window.addEventListener('keyup', (event) => {
         case 'ArrowLeft':
             keys.ArrowLeft.pressed = false
             break
-        case 'ArrowUp':
-            keys.ArrowUp.pressed = false
-            break
+        // case 'ArrowUp':
+        //     keys.ArrowUp.pressed = false
+        //     break
     }
 })
