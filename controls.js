@@ -1,6 +1,6 @@
 const controlsButton = document.querySelector('.controls-button');
 
-const controls = document.querySelector('.controls');
+const controls = document.querySelector('.controls-container');
 
 
 const noDisplay = 'no-display';
