@@ -84,3 +84,54 @@ body{
     bottom: 0;
     left: 0;
 }
+
+.controls-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    /* display: none; */
+}
+
+.controls {
+    border-collapse: collapse;
+    width: 450px;
+    background-color: white;
+
+}
+
+.controls th, .controls td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.controls th {
+    background-color: gray;
+    color: white;
+}
+
+.controls td[class='keyboard'] {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.keyboard p {
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 3px;
+    box-shadow: 1px 1px 1px #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.no-display{
+    display: none;
+}
+
+
